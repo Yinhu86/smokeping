@@ -67,6 +67,7 @@ def second_avg(rrd_tmp, time_list, filename):
         f.write(record_info + "ms" + '\n')
 
 def main():
+    Dumpfile()
     sys_time = time.strftime("%Y-%m")
     sys_time2 = time.strftime("%F")
     filename = 'record_' + sys_time2
@@ -95,11 +96,9 @@ if __name__ == '__main__':
     res1 = subprocess.call('ls *.rrd', shell=True, stdout=open('/dev/null','w'))
     res2 = subprocess.call('ls /var/lib/smokeping/rrd/Ping/*.rrd', shell=True, stdout=open('/dev/null','w'))
     if res1 == 0:
-        Dumpfile()
         main()
     elif res2 == 0:
         os.system('\cp /var/lib/smokeping/rrd/Ping/*.rrd . ')
-        Dumpfile()
         main()
     else:
         print "copy this file to rrd  directory"
