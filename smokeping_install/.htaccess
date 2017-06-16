@@ -1,0 +1,4 @@
+authname "auth"
+authtype   basic                         
+authuserfile  /etc/httpd/conf/htpasswd  
+require     valid-user admin 
