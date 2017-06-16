@@ -67,6 +67,6 @@ systemctl enable smokeping httpd
 echo "#####################################"
 echo "     "
 echo -e "\e[1;31m    Login URL:  http://IP/smokeping/sm.cgi  \e[0m"
-echo -e "\e[1;31m    Login User: admin/syscloud.cn@ \e[0m"
+echo -e "\e[1;31m    Login User: admin/admin@123.com \e[0m"
 echo "     "
 echo "####################################"
